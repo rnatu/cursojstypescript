@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rnatu/cursojstypescript/issues"
   },
-  "homepage": "https://github.com/rnatu/cursojstypescript#readme"
+  "homepage": "https://github.com/rnatu/cursojstypescript#readme",
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  }
 }
