@@ -1,4 +1,5 @@
 // Utilize any apenas em último caso
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function showMessage(msg: any) {
   return msg;
 }
