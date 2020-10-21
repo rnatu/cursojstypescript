@@ -12,3 +12,6 @@ const objetoA: {
 objetoA.chaveC = 'Nova chave';
 objetoA.chaveD = 'Nova chave';
 console.log(objetoA);
+
+// Module mode
+export default 1;
