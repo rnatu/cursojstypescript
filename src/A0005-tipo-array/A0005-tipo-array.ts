@@ -1,5 +1,4 @@
 // Array<T> - T[]
-
 export function multiplicaArgs(...args: Array<number>): number {
   return args.reduce((ac, valor) => {
     return ac * valor;
@@ -17,3 +16,10 @@ export function maiusculo(...args: string[]): string[] {
   return args.map((valor) => valor.toUpperCase());
 }
 console.log(maiusculo('a', 'b', 'c'));
+
+// readonly array
+const array1: readonly string[] = ['Luiz', 'Otávio'];
+const array2: ReadonlyArray<string> = ['Luiz', 'Otávio'];
+
+console.log(array1);
+console.log(array2);
