@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 let x;
 if (x === undefined) x = 2;
 console.log(x * 2);
@@ -19,6 +21,7 @@ person1.lastname === undefined
   : console.log('Preenchido nome completo');
 
 //% null
+
 export function squareOf(x: any) {
   if (typeof x === 'number') return x * x;
   return null;
