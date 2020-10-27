@@ -15,3 +15,6 @@ export function escolhaACor(cor: Cores): void {
 }
 
 escolhaACor(Cores.ROXO);
+
+//Module mode
+export default 1;
