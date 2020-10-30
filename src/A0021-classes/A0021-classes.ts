@@ -1,3 +1,4 @@
+// # Classe/Tipo Empresa
 export class Empresa {
   public readonly nome: string; // public não necessário
   private readonly colaboradores: /*readonly*/ Colaborador[] = []; // % Classes no typescript tambem funcionam como tipo
@@ -23,6 +24,7 @@ export class Empresa {
   }
 }
 
+// # Classe/Tipo Colaborador
 export class Colaborador {
   constructor(
     public readonly nome: string,
