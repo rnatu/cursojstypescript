@@ -9,8 +9,11 @@ export class Empresa {
   }
 
   /*public não necessário*/
-  public adicionaColaborador(colaborador: Colaborador): void {
-    this.colaboradores.push(colaborador);
+  public adicionaColaborador(...colaborador: Colaborador[]): void {
+    colaborador.map((item) => {
+      this.colaboradores.push(item);
+    });
+    // this.colaboradores.push(colaborador);
   }
 
   mostrarColaboradores(): void {
@@ -32,9 +35,7 @@ const colaborador1 = new Colaborador('Luiz', 'Otávio');
 const colaborador2 = new Colaborador('Maria', 'Miranda');
 const colaborador3 = new Colaborador('João', 'Vieira');
 
-empresa1.adicionaColaborador(colaborador1);
-empresa1.adicionaColaborador(colaborador2);
-empresa1.adicionaColaborador(colaborador3);
+empresa1.adicionaColaborador(colaborador1, colaborador2, colaborador3);
 empresa1.adicionaColaborador({
   nome: 'Fernando',
   sobrenome: 'Alves',
