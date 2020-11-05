@@ -8,6 +8,7 @@ export class Pessoa {
     this.cpf = _cpf;
   }
 
+  //setters não precisam de notação de retorno
   set cpf(valor: string) {
     console.log('SETTER CHAMADO');
     this._cpf = valor;
