@@ -1,5 +1,3 @@
-import { multiplicaArgs } from '../A0005-tipo-array/A0005-tipo-array';
-
 type Adder = {
   (x: number): number;
   (x: number, y: number): number;
@@ -15,3 +13,5 @@ const adder: Adder = (x: number, y?: number, ...args: number[]) => {
 console.log(adder(5));
 console.log(adder(5, 6));
 console.log(adder(1, 2, 3));
+
+export default 1;
