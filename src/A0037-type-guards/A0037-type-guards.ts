@@ -17,13 +17,13 @@ export class Aluno implements Pessoa {
   constructor(public nome: string) {}
 }
 
-export class Mamimero implements Animal {
+export class Mamifero implements Animal {
   tipo: 'animal' = 'animal';
   constructor(public cor: string) {}
 }
 
 const aluno1 = new Aluno('Fernando');
-const mamifero1 = new Mamimero('Branco');
+const mamifero1 = new Mamifero('Branco');
 
 function mostraInfo(obj: PessoaOuAnimal) {
   // if ('nome' in obj) console.log(obj.nome);
