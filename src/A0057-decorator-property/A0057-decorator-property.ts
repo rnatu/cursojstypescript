@@ -1,30 +1,31 @@
-function decorador(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  classPrototype: any,
-  nomeMetodo: string | symbol,
-  index: number,
-): void {
-  console.log(classPrototype);
-  console.log(nomeMetodo);
-  console.log(index);
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+function decorador(classPrototype: any, nome: string | symbol): any {
+  let valorPropriedade: any;
+  return {
+    get: () => valorPropriedade,
+    set: (valor: any) => {
+      if (typeof valor === 'string') {
+        valorPropriedade = valor.split('').reverse().join('');
+        return;
+      }
+      valorPropriedade = valor;
+    },
+  };
 }
 
 export class UmaPessoa {
-  nome: string;
-  sobrenome: string;
-  idade: number;
+  @decorador nome: string;
+  @decorador sobrenome: string;
+  @decorador idade: number;
 
-  constructor(
-    @decorador nome: string,
-    @decorador sobrenome: string,
-    @decorador idade: number,
-  ) {
+  constructor(nome: string, sobrenome: string, idade: number) {
     this.nome = nome;
     this.sobrenome = sobrenome;
     this.idade = idade;
   }
 
-  metodo(@decorador msg: string): string {
+  metodo(msg: string): string {
     return `${this.nome} ${this.sobrenome}: ${msg}`;
   }
 
