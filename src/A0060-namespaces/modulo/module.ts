@@ -16,6 +16,9 @@ namespace MeuNamespace {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
+const constDoNamespace = 'Valor da const fora do namespace';
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const pessoaDoNamespace = new MeuNamespace.PessoaDoNamespace('Roberto');
 // console.log(pessoaDoNamespace);
 

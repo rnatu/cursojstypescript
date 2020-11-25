@@ -22,6 +22,8 @@ var MeuNamespace;
   );
 })(MeuNamespace || (MeuNamespace = {}));
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
+var constDoNamespace = 'Valor da const fora do namespace';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 var pessoaDoNamespace = new MeuNamespace.PessoaDoNamespace('Roberto');
 // console.log(pessoaDoNamespace);
 // console.log(MeuNamespace.nomeDoNamespace);
@@ -29,5 +31,6 @@ var pessoaDoNamespace = new MeuNamespace.PessoaDoNamespace('Roberto');
 /* eslint-disable @typescript-eslint/triple-slash-reference */
 /// <reference path="modulo/module.ts" />
 console.log(MeuNamespace.nomeDoNamespace);
-//# gera um 'bundle' para as utilizações acima funcionar, pois ira utilizar o commonjs
+console.log(constDoNamespace);
+//# gera um 'bundle' do arquivo original ts para um js, podendo ser utilizado como mostrado acima
 //npx tsc src/A0060-namespaces/index.ts --outfile src/A0060-namespaces/index.js
