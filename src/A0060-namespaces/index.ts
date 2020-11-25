@@ -1,25 +1,7 @@
-/* eslint-disable @typescript-eslint/no-namespace */
-namespace MeuNamespace {
-  export const nomeDoNamespace = 'Luiz';
-
-  export class PessoaDoNamespace {
-    constructor(public nome: string) {}
-  }
-
-  const pessoa = new PessoaDoNamespace('Felipe');
-  console.log(pessoa);
-
-  export namespace OutroNamespace {
-    export const nomeDoOutroNamespace = 'Renato';
-  }
-}
-
-const pessoaDoNamespace = new MeuNamespace.PessoaDoNamespace('Roberto');
-console.log(pessoaDoNamespace);
+/* eslint-disable @typescript-eslint/triple-slash-reference */
+/// <reference path="modulo/module.ts" />
 
 console.log(MeuNamespace.nomeDoNamespace);
 
-console.log(MeuNamespace.OutroNamespace.nomeDoOutroNamespace);
-
-//Module Mode
-export default 1;
+//# gera um 'bundle' do arquivo original ts para um js, podendo ser utilizado como mostrado acima
+//npx tsc src/A0060-namespaces/index.ts --outfile src/A0060-namespaces/index.js
